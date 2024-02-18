@@ -1,0 +1,112 @@
+
+/* *********************** footer *************** */
+.blocFooter{
+    font-size: 24px;
+    display: inline-block;
+    vertical-align:top;
+    min-height: 60px;
+    width: 100%;
+    text-align: center;
+}
+.resSociaux{
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+
+.faFoot {
+    padding: 20px;
+    font-size: 30px;
+    width: 30px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 2px;
+    border-radius: 50%;
+}
+.faFoot:hover {
+    opacity: 0.8;
+}
+.fa-linkedin {
+    background: #007bb5;
+    color: white;
+}
+.fa-viadeo {
+    background: #125688;
+    color: white;
+}
+.fa-facebook {
+    background: #3B5998;
+    color: white;
+}
+.fa-twitter {
+    background: #55ACEE;
+    color: white;
+}
+.fa-google {
+    background: #dd4b39;
+    color: white;
+}
+.fa-youtube {
+    background: #bb0000;
+    color: white;
+}
+.fa-pinterest {
+    background: #cb2027;
+    color: white;
+}
+.fa-github {
+    background: #582879;
+    color: white;
+}
+.fa-skype {
+    background: #00aff0;
+    color: white;
+}
+.fa-rss {
+    background: #ff6600;
+    color: white;
+}
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 110%;
+    left: 50%;
+    margin-left: -60px;
+    opacity: 0;
+    transition: opacity 1s;
+    -webkit-transition: opacity 1s;
+    -moz-transition :opacity 1s;
+    -ms-transition: opacity 1s;
+    -o-transition: opacity 1s;
+    font-size: 24px;
+}
+
+.tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
+/* *********************** fin footer *************** */
