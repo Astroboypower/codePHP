@@ -1,8 +1,6 @@
 <?php declare (strict_types = 1);
 include 'C:/wamp64/www/codePhp/includes/entete.php';
 
-
-
 echo "<h3>"." Les tableaux"."</h3>";
 
 $langues = array(
@@ -79,3 +77,8 @@ foreach ($variables as $key => $value) {
 echo $nom; // Affiche 'John'
 
 ?>
+
+<?php
+require_once __DIR__.'/../includes/footer.php';
+?>
+

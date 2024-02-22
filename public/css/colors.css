@@ -1,0 +1,170 @@
+:root {
+    /* Ces styles sont les valeurs par défaut pour le thème sombre.
+Ils sont définis en utilisant des variables CSS, ce qui permet de les réutiliser facilement dans le reste du fichier CSS. */
+    --mainBackground: #222222;
+    --mainText: #ffffff;
+    --hoverTextMenuEtBoutons: #ffffff;
+    --borderLines: #666666  ;
+    --mainButton: #FAB131;
+    --secondaryButton: #0a2f48;
+    --shadow: #6f6f6f;
+    --MenuText: #FAB131;
+    --TitleText: #FAB131;
+    --TableLines: #FAB131;
+    --BackgroundTheme: #222222;
+
+}
+[data-theme="dark"] {
+    /* Ici, vous pouvez ajouter des styles spécifiques pour le thème sombre si nécessaire. */
+
+}
+
+[data-theme="light"] {
+    /* Ces styles sont appliqués lorsque le thème clair est activé.
+    Ils redéfinissent les variables CSS définies dans :root pour correspondre au thème clair. */
+    --mainBackground: #ffffff;
+    --mainText: #000000;
+    --hoverTextMenuEtBoutons: #ffffff;
+    --borderLines: #cccccc;
+    --mainButton: #FAB131;
+    --secondaryButton: #0a2f48;
+    --shadow: #999999;
+    --MenuText: #FAB131;
+    --TitleText: #a04007;
+    --TableLines: #0a2f48;
+    --BackgroundTheme: #888888;
+
+    .menu{
+        box-shadow: 5px 5px 5px 5px var(--shadow);
+    }
+}
+
+body {
+    color: var(--mainText);
+    background-color: var(--mainBackground);
+}
+
+footer {
+    color: var(--mainText);
+    background-color: var(--mainBackground);
+    border-top: 1px solid var(--borderLines);
+}
+
+h2, h1 {
+    color:  var(--TitleText);
+}
+li {
+    color:  var(--secondaryButton);
+}
+/* La couleur des bordures des tableaux, des cellules d'en-tête (th) et des cellules de données (td) est définie en utilisant la variable CSS --TableLines. */
+table, th, td {
+    border: 1px solid var(--TableLines);
+}
+
+/* Le slider est le bouton qui permet de basculer entre les thèmes clair et sombre.
+Sa couleur de fond et de bordure est définie en utilisant les variables CSS. */
+.slider {
+    background-color: var(--BackgroundTheme); /* Fond avant en rouge */
+    border: 1px solid var(--MenuText); /* Bordure de 1px en blanc */
+}
+
+.slider:before {
+    background-color: white; /* Bouton en blanc */
+}
+
+input:focus + .slider {
+    box-shadow: 0 0 1px white; /* Ombre en blanc lorsque le bouton est en focus */
+}
+
+input:checked + .slider {
+    background-color:var(--BackgroundTheme); /* Fond après en bleu lorsque le bouton est coché */
+}
+
+/* Cette règle définit la couleur de fond et de texte lorsqu'un texte est sélectionné par l'utilisateur. */
+::selection {
+    background: var(--mainButton);
+    color: white;
+}
+::-moz-selection {
+    background: var(--mainButton);
+    color: white;
+}
+.closebtn {
+    color:  var(--mainText);
+}
+
+.bloc {
+    background-color:  var(--mainText);
+}
+
+.alert {
+    background-color: var(--secondaryButton);
+    color:  var(--mainText);
+}
+
+
+.closebtn:hover {
+    color: var(--mainBackground);
+}
+
+input[type=submit] {
+    color:  var(--secondaryButton);
+    background-color: var(--mainButton);
+    border: 2px solid var(--secondaryButton);
+}
+
+input[type=submit]:hover {
+    background-color: var(--secondaryButton);
+    color: var(--mainText);
+}
+.menu{
+}
+
+.dropbtn {
+    background-color: transparent;
+}
+
+.dropdown-content {
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.dropdown-content-menu {
+    background: #333333;
+    background: -moz-linear-gradient(top, #000000 0%, #333333 100%);
+    background: -webkit-linear-gradient(top, #000000 0%,#333333 100%);
+    background: linear-gradient(to bottom, #000000 0%,#333333 100%);
+    color: var(--mainButton);
+    border-color: #333333;
+}
+
+.dropdown-content-menu a {
+    color: var(--mainButton);
+}
+
+.dropdownMenu:hover .dropdown-content-menu {
+    box-shadow: 0px 10px 5px 0px var(--shadow);
+}
+
+.backroundGardient{
+    background: #333333;
+    background: -moz-linear-gradient(top, #AAAAAA 0%, #000000 100%);
+    background: -webkit-linear-gradient(top, #AAAAAA 0%,#000000 100%);
+    background: linear-gradient(to bottom, #AAAAAA 0%,#000000 100%);
+}
+
+.backroundButton{
+    color:var(--mainButton);
+}
+
+.backroundButton:hover{
+    color: var(--hoverTextMenuEtBoutons);
+}
+
+.fa:hover{
+    color: var(--hoverTextMenuEtBoutons);
+}
+
+.dropdown-content-menu a:hover {
+    background-color: var(--borderLines);
+    color:  var(--hoverTextMenuEtBoutons);
+}

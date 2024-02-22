@@ -35,10 +35,26 @@ Faire un commit. Un commit est une façon de sauvegarder l’état actuel de vot
 Ajout du message de commit qui décrit les modifications apportées.
 `git commit -m "Mon premier commit"`
 
-##
+## Étape 6: Pousser les modifications sur GitHub
+Après la création d'un repository sur github, et après le premier commit: 
+Pousser les modifications sur GitHub. Pour cela, vous devez d’abord ajouter un dépôt distant à votre dépôt local. Vous pouvez le faire avec la commande `git remote add. `
+Ensuite, vous pouvez pousser vos modifications avec la commande git push.
+
+`git remote add origin https://github.com/votre_nom_d'utilisateur/votre_dépôt.git `
+`git push -u origin master`
+
+pour ma part ça sera 
+`git remote add origin https://github.com/Astroboypower/codePHP`
+`git push -u origin master`
 
 
-##
+## cration d'une autre branche
+Je vais créer une nouvelle fonctionnalité, donc une nouvelle branche git `dark-theme` pour installer un mode sombre.
+en cmd : 
+`git branch dark-theme`
+`git checkout dark-theme`
 
+Basculer vers la nouvelle branche : Après avoir créé la nouvelle branche, vous pouvez y basculer en utilisant la commande git checkout. Par exemple :
+`git checkout dark-theme`
 
 ##

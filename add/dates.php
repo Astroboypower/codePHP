@@ -16,6 +16,7 @@ $lastmonth = mktime(0, 0, 0, $lastMonthMonth, $todayDay + 1, $thisYear);
 $nextyear = mktime(0, 0, 0, $thisMonth, $todayDay, $thisYear + 1);
 
 ?>
+
     <p>
         <h2 class="smallTitreRow orange thick">Les dates </h2>
         <div class="margeGaucheDroite">
@@ -122,20 +123,24 @@ $itinerary = [PARIS, RIO, SAN_FRANCISCO, TOKYO, PARIS];
 
 // Heure de départ de Paris
 $depart = new DateTime('now', new DateTimeZone($locations['Paris']));
+?>
 
-echo "<table>";
-echo "<tr><th>Voyage</th><th>Heure de départ</th><th>Heure d'arrivée</th></tr>";
+<table>
+<tr><th>Voyage</th><th colspan='4'>Heure de départ</th><th colspan='4'>Heure d'arrivée</th></tr>
+<tr><th></th><th>Paris</th><th>Rio</th><th>San Francisco</th><th>Tokyo</th><th>Paris</th><th>Rio</th><th>San Francisco</th><th>Tokyo</th></tr>
 
-echo "<table>";
-echo "<tr><th>Voyage</th><th colspan='4'>Heure de départ</th><th colspan='4'>Heure d'arrivée</th></tr>";
-echo "<tr><th></th><th>Paris</th><th>Rio</th><th>San Francisco</th><th>Tokyo</th><th>Paris</th><th>Rio</th><th>San Francisco</th><th>Tokyo</th></tr>";
-
+    <h2 class="smallTitreRow orange thick">Calcul pour les voyages </h2>
+    <p>
+        En admettant que l'on puisse partir maintenant
+    </p>
+<?php
 // Pour chaque vol dans l'itinéraire
 for ($i = 0; $i < count($itinerary) - 1; $i++) {
     // Calculer l'heure d'arrivée
     $arrival = clone $depart;
     $flightTime = $flightTimes[$itinerary[$i] . '-' . $itinerary[$i + 1]];
     $arrival->modify("+$flightTime hours");
+
 
     echo "<tr>";
     echo "<td>" . $itinerary[$i] . " - " . $itinerary[$i + 1] . "<br>Durée : " . $flightTime . " heures</td>";
@@ -158,33 +163,48 @@ for ($i = 0; $i < count($itinerary) - 1; $i++) {
     $depart = $arrival;
 }
 
-echo "</table>";
-
+?>
+</table>
+<?php
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $departCity = $_POST["departCity"];
     $arrivalCity = $_POST["arrivalCity"];
-    // Votre code pour calculer et afficher les heures de départ et d'arrivée
 }
 ?>
-    <a id="form"></a>
+    <h2 class="smallTitreRow orange thick">Calcul de dates avec les formulaires </h2>
+    <p class="margeGaucheDroite">
+        <a id="form"></a>
+        <!-- Début du formulaire -->
     <form method="post" action="<?php echo $_SERVER["PHP_SELF"];?>#form">
-        Ville de départ:
-        <select name="departCity">
-            <option value="Paris" selected="selected">Paris</option>
-            <option value="Rio de Janeiro" <?php if ($_POST['departCity'] == 'Rio de Janeiro') echo 'selected="selected"'; ?>>Rio de Janeiro</option>
-            <option value="San Francisco" <?php if ($_POST['departCity'] == 'San Francisco') echo 'selected="selected"'; ?>>San Francisco</option>
-            <option value="Tokyo" <?php if ($_POST['departCity'] == 'Tokyo') echo 'selected="selected"'; ?>>Tokyo</option>
+    <label for="departCity">Ville de départ:</label>
+        <!-- Champ de sélection pour la ville de départ -->
+        <select name="departCity" class="maxFormField">
+            <!-- Chaque option représente une ville. La valeur de l'option est ce qui est envoyé au serveur lorsque le formulaire est soumis. -->
+            <!-- Pour chaque option, on vérifie si la ville a été sélectionnée précédemment (c'est-à-dire si elle est égale à $_POST['departCity']). Si c'est le cas, on ajoute l'attribut 'selected' à l'option. -->
+            <option value="Paris" <?php if (isset($_POST['departCity']) && $_POST['departCity'] == 'Paris') echo 'selected="selected"'; ?>>Paris</option>
+            <option value="Rio de Janeiro" <?php if (isset($_POST['departCity']) && $_POST['departCity'] == 'Rio de Janeiro') echo 'selected="selected"'; ?>>Rio de Janeiro</option>
+            <option value="San Francisco" <?php if (isset($_POST['departCity']) && $_POST['departCity'] == 'San Francisco') echo 'selected="selected"'; ?>>San Francisco</option>
+            <option value="Tokyo" <?php if (isset($_POST['departCity']) && $_POST['departCity'] == 'Tokyo') echo 'selected="selected"'; ?>>Tokyo</option>
         </select>
-        Ville d'arrivée:
-        <select name="arrivalCity">
-            <option value="Rio de Janeiro" selected="selected">Rio de Janeiro</option>
-            <option value="Paris" <?php if ($_POST['arrivalCity'] == 'Paris') echo 'selected="selected"'; ?>>Paris</option>
-            <option value="San Francisco" <?php if ($_POST['arrivalCity'] == 'San Francisco') echo 'selected="selected"'; ?>>San Francisco</option>
-            <option value="Tokyo" <?php if ($_POST['arrivalCity'] == 'Tokyo') echo 'selected="selected"'; ?>>Tokyo</option>
+        <label for="arrivalCity">Ville d'arrivée:</label>
+        <!-- Champ de sélection pour la ville d'arrivée -->
+        <select name="arrivalCity" class="maxFormField">
+            <!-- Même logique que pour le champ de sélection de la ville de départ -->
+            <option value="Rio de Janeiro" <?php if (isset($_POST['arrivalCity']) && $_POST['arrivalCity'] == 'Rio de Janeiro') echo 'selected="selected"'; ?>>Rio de Janeiro</option>
+            <option value="Paris" <?php if (isset($_POST['arrivalCity']) && $_POST['arrivalCity'] == 'Paris') echo 'selected="selected"'; ?>>Paris</option>
+            <option value="San Francisco" <?php if (isset($_POST['arrivalCity']) && $_POST['arrivalCity'] == 'San Francisco') echo 'selected="selected"'; ?>>San Francisco</option>
+            <option value="Tokyo" <?php if (isset($_POST['arrivalCity']) && $_POST['arrivalCity'] == 'Tokyo') echo 'selected="selected"'; ?>>Tokyo</option>
         </select>
+        <!-- Bouton de soumission du formulaire -->
+    <br>
         <input type="submit">
     </form>
+    <!-- Fin du formulaire -->
+
+    </p>
+
+    <br>
 
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -214,6 +234,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         echo "Temps de vol : " . $flightTime . " heures";
     }
 }
-
+?>
+<div class="row"></div>
+<?php
 require_once __DIR__ . '/../includes/footer.php';
 ?>

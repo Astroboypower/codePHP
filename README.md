@@ -160,3 +160,19 @@ if ($page == 'home') {
 14.	$years = $interval->format('%y'); : extrait le nombre d’années de l’intervalle.
 15.	$months = $interval->format('%m'); : extrait le nombre de mois de l’intervalle.
 16.	$days = $interval->format('%d'); : extrait le nombre de jours de l’intervalle.
+
+## mode clair et un mode sombre
+
+Ce projet inclut une fonctionnalité de basculement entre un mode clair et un mode sombre pour améliorer l'expérience utilisateur. 
+Cette fonctionnalité est gérée par un bouton de basculement situé dans l'en-tête du site.
+Lorsqu'un utilisateur bascule entre les modes, le choix de l'utilisateur est enregistré dans les cookies du navigateur.
+Ainsi, lorsque l'utilisateur revient sur le site, son choix de thème est conservé.
+Le thème choisi par l'utilisateur (clair ou sombre) est appliqué à l'ensemble du site grâce à l'attribut `data-theme` sur l'élément racine `<html>`. 
+Les styles CSS du site utilisent cet attribut pour appliquer les couleurs appropriées en fonction du thème choisi.
+Voici comment cela fonctionne en détail :
+
+1. Lorsque la page est chargée, le script JavaScript dans l'en-tête lit le cookie du thème et applique le thème correspondant en définissant l'attribut `data-theme` sur l'élément `<html>`.
+2. Le bouton de basculement dans l'en-tête est également mis à jour pour refléter le thème actuel.
+3. Lorsqu'un utilisateur clique sur le bouton de basculement, le script JavaScript change l'attribut `data-theme` sur l'élément `<html>` et met à jour le cookie du thème.
+
+Notez que cette fonctionnalité nécessite que les cookies soient activés dans le navigateur de l'utilisateur.

@@ -1,0 +1,287 @@
+body {
+    margin: 0;
+    font-family: 'Quicksand', sans-serif;
+    text-decoration: none;
+
+}
+
+/* entete */
+.imgEnteteFond{
+    width: 100%;
+    max-height: 250px;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+
+input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+/* fin entete */
+
+h2, h3, p, li {
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-size: 40px;
+}
+
+h3 {
+    font-size: 28px;
+}
+
+p, li {
+    font-size: 20px;
+}
+
+form {
+    margin: 0 auto;
+    width: 80%;
+}
+
+.maxFormField {
+    max-width: 80%;
+}
+
+.texteSmall {
+    font-size: 16px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.noDisplay {
+    display: none;
+}
+
+.relativeEntete {
+    position: relative;
+    font-size: 0;
+}
+
+.row {
+    font-size: 0;
+    width: 85%;
+    min-height: 50px;
+    margin: 0 auto;
+    padding: 30px 10px 0;
+    text-align: center;
+}
+
+.bloc {
+    font-size: 20px;
+    display: inline-block;
+    vertical-align: top;
+    min-height: 100px;
+    min-width: 20px;
+    margin: 2%;
+}
+
+.margeGaucheDroite {
+    margin: 0 5%;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+th, td {
+    padding: 15px;
+    text-align: left;
+}
+.radius {
+    border-radius: 7px;
+}
+
+.shadow {
+    box-shadow: 5px 5px 5px 5px #6f6f6f;
+}
+
+.centrer {
+    width: 90%;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.marginTop {
+    margin-top: 50px;
+}
+
+.coupureCouleur {
+    padding-top: 20px;
+    margin-top: 20px;
+}
+
+.borderShadow1 {
+    box-shadow: 4px -4px 5px 0px  #6f6f6f;
+}
+
+.borderShadow2 {
+    box-shadow: -4px 4px 5px 0px  #6f6f6f;
+}
+
+.rowPlanning {
+    font-size: 0;
+    width: 85%;
+    min-height: 50px;
+    margin: 0 auto;
+    padding: 0 10px;
+    text-align: center;
+}
+
+.paddingBottom {
+    padding-bottom: 30px;
+}
+
+.list-tableau {
+    position: relative;
+    display: block;
+    padding: 10px 15px;
+    margin-bottom: -1px;
+    text-align: left;
+}
+
+.minCoordonnes {
+    min-width: 265px;
+}
+
+input[type=submit] {
+    border: none;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.3s;
+    cursor: pointer;
+}
+
+.containerContact {
+    border-radius: 5px;
+    padding: 20px;
+    margin: 0 10%;
+}
+
+.alert {
+    padding: 20px;
+}
+
+.closebtn {
+    margin-left: 15px;
+    font-weight: bold;
+    float: right;
+    font-size: 22px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.centrerImage {
+    display: flex;
+    justify-content: center;
+}
+
+.image {
+    width: 100px;
+    height: 50px;
+    margin: 0 10px;
+}
+
+.dropdown-content {
+    display: none;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+@media only screen and (max-width: 500px) {
+    .display {
+        display: none;
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: calc(100% - 100px);
+        height: 100%;
+        overflow: hidden;
+        text-align: left;
+    }
+    .blocDisplay {
+        width: 90%;
+        margin: 0 auto;
+        padding-bottom: 30px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .titleDisplay {
+        margin: 5px;
+        padding: 0;
+        display: block;
+        position: relative;
+        width: 100%;
+        font-size: 24px;
+        text-shadow: 5px 5px 3px #6f6f6f;
+        transition: all 0.3s;
+    }
+    .display .titleDisplay {
+        padding-left: 10px;
+    }
+    .SmallResponsiveFontSize {
+        font-size: 18px;
+    }
+    .caption {
+        position: absolute;
+        left: 0;
+        top: 1%;
+        width: 100%;
+        text-align: center;
+    }
+}
