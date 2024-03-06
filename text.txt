@@ -1,0 +1,84 @@
+Structure du dossier pour le volume Windows
+Le num‚ro de s‚rie du volume est 1A89-2616
+C:.
+³   .gitignore
+³   .htaccess
+³   favicon.ico
+³   GUIDE.md
+³   index.php
+³   README.md
+³   text.txt
+³   
+ÃÄÄÄ.idea
+³   ³   .gitignore
+³   ³   codePhp.iml
+³   ³   deployment.xml
+³   ³   misc.xml
+³   ³   modules.xml
+³   ³   php.xml
+³   ³   vcs.xml
+³   ³   workspace.xml
+³   ³   
+³   ÃÄÄÄinspectionProfiles
+³   ³       Project_Default.xml
+³   ³       
+³   ÀÄÄÄstylesheetLinters
+³           stylelint.xml
+³           
+ÃÄÄÄadd
+³       bdd.php
+³       classEnfant.php
+³       contact.php
+³       dates.php
+³       erreur404.php
+³       failles.php
+³       games.php
+³       home.php
+³       superGlobales.php
+³       tableaux.php
+³       
+ÃÄÄÄconfig
+³       routing.php
+³       
+ÃÄÄÄincludes
+³       entete.php
+³       footer.php
+³       menu.php
+³       
+ÃÄÄÄpublic
+³   ÃÄÄÄcss
+³   ³       colors.css
+³   ³       font-awesome.css
+³   ³       font-awesome.min.css
+³   ³       footer.css
+³   ³       icones.css
+³   ³       main.css
+³   ³       menu.css
+³   ³       
+³   ÃÄÄÄfonts
+³   ³       fontawesome-webfont.eot
+³   ³       fontawesome-webfont.svg
+³   ³       fontawesome-webfont.ttf
+³   ³       fontawesome-webfont.woff
+³   ³       fontawesome-webfont.woff2
+³   ³       FontAwesome.otf
+³   ³       icomoon.eot
+³   ³       icomoon.svg
+³   ³       icomoon.ttf
+³   ³       icomoon.woff
+³   ³       
+³   ÃÄÄÄimages
+³   ³       entete.png
+³   ³       identite2.png
+³   ³       marker.png
+³   ³       
+³   ÀÄÄÄjs
+³           menu.js
+³           theme.js
+³           
+ÀÄÄÄsrc
+    ³   App.php
+    ³   
+    ÀÄÄÄtests
+            classParent.php
+            

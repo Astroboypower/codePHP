@@ -114,6 +114,14 @@ a {
     padding: 30px 10px 0;
     text-align: center;
 }
+.rowSlim {
+    font-size: 0;
+    width: 85%;
+    min-height: 15px;
+    margin: 0 auto;
+    padding: 30px 10px 0;
+    text-align: center;
+}
 
 .bloc {
     font-size: 20px;

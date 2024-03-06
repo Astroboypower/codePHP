@@ -1,17 +1,21 @@
 <?php
-require_once __DIR__.'/../includes/entete.php';
+// Inclusion du fichier 'entete.php'
+require_once __DIR__ . '/../includes/entete.php';
+?>
+<div class="rowSlim"></div>
+<h2>A propos - Coordonnées</h2>
+<?php
+
+
+
+
+
+
+
 
 ?>
-
-<!-- maps -->
-<section id="contactUs"><br><br>
-    <div id="location" class="full">
-        <div class="titreRow"><h2>A propos - Coordonnées</h2></div>
-    </div>
-</section>
-
-<!--fin maps -->
+<div class="rowSlim"></div>
 
 <?php
-require_once __DIR__.'/../includes/footer.php';
+require_once __DIR__ . '/../includes/footer.php';
 ?>

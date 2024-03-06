@@ -1,9 +1,13 @@
 .menu{
     z-index: 2;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
     display: flex;
     align-items: center;
     justify-content: space-between;
-
+    flex-wrap: wrap;
+    height: auto;
 }
 .fixedTop {
     position: fixed;
@@ -17,10 +21,8 @@
     cursor: pointer;
 }
 .linksButton {
-    padding-top: 20px;
-    padding-bottom: 12px;
-    padding-left: 16px;
-    padding-right: 16px;
+    padding-left: 10px;
+    padding-right: 10px;
     font-size: 16px;
     border: none;
     cursor: pointer;
@@ -76,7 +78,7 @@
     width: 100%;
     display: flex;
     align-items: center;
-    height: 40px; /* Vous pouvez changer cette valeur comme vous voulez */
+    /* height: 40px;  Vous pouvez changer cette valeur comme vous voulez */
 }
 
 .floatLeft  {float:left;margin-left: 20px;}

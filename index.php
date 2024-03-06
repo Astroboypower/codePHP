@@ -33,7 +33,7 @@ else {
 </p>
 
 <?php
-// Utilisation de la fonction spl_autoload_register pour charger automatiquement les classes à partir du dossier src
+// Utilisation de la fonction spl_autoload_register pour charger automatiquement les classes à partir du dossier src (sans sous dosssiers)
 spl_autoload_register(function ($name) {
     require_once 'src/' . $name . '.php';
 });

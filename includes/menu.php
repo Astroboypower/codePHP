@@ -2,7 +2,9 @@
 <?php
 // Définition d'un tableau associatif pour les pages du menu
 require __DIR__ . '/../config/routing.php';
+
 ?>
+
 <div id="scrollTop" class="largeFull backroundGardient menu">
     <a href="<?php echo $home; ?>" class="floatLeft linksHome "><i class="fa fa-home fa-lg backroundButton" aria-hidden="true"></i></a>
     <?php

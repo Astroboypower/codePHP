@@ -5,13 +5,23 @@ session_start();
 $theme = $_COOKIE['theme'] ?? 'dark'; // Utilisez le thème du cookie s'il existe, sinon utilisez 'dark' par défaut
 $checked = $theme === 'light' ? 'checked' : ''; // Si le thème est 'light', le bouton doit être coché
 
+// Utilisation de la fonction spl_autoload_register pour charger automatiquement les classes à partir du dossier src
+spl_autoload_register(function ($name) {
+    $name = str_replace('\\', '/', $name);
+    $repo =  __DIR__ . '/../src/' . $name . '.php';
+    //var_dump($repo);
+
+    require_once $repo;
+});
+
+
 $cookie_name = "user";
 $cookie_value = "John Doe";
 setcookie($cookie_name, $cookie_value, time() + (86400 * 30), "/"); // 86400 = 1 day
 
-$home = 'http://codephp/';
+$home = '/';
+$filesDirecrory = 'add/';
 $adresse = $home.'index.php?what=';
-$filesDirecrory ='add/';
 $imagesDirectory = 'C:/wamp64/www/codePhp/public/images/';
 
 $ccsStyle = '/public/css/colors.css';

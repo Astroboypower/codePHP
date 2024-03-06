@@ -11,5 +11,7 @@ $pagesMenu = array(
     'La Base de données' => 'bdd.php',
     'Les Super Globales' => 'superGlobales.php',
     'Failles' => 'failles.php',
+    'héritage' => 'classEnfant.php',
+    'Exemples' => 'Games.php',
     'Contact' => 'contact.php'
 );

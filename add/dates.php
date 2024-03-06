@@ -172,6 +172,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $arrivalCity = $_POST["arrivalCity"];
 }
 ?>
+
+
     <h2 class="smallTitreRow orange thick">Calcul de dates avec les formulaires </h2>
     <p class="margeGaucheDroite">
         <a id="form"></a>
