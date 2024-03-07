@@ -92,3 +92,37 @@ Cette commande supprime la branche dark-theme du dépôt local. Noter que Git ne
 
 Pour supprimer la branche dark-theme sur GitHub,utiliser la commande git push avec l’option --delete :
 `git push origin --delete dark-theme`
+
+
+
+## Dépôt GitLab:
+## 	GitHub et GitLab
+Création d’un compte gitLab ….
+j'ai déja mon dépo github `git remote add origin 
+
+`git remote add origin https://github.com/Astroboypower/codePHP`
+
+Petit rappel pour pousser les modifications sur Github
+git status
+si tout est ok
+git add .
+si tout c'est bien passé 
+git commit -m "message pour le suivi"`
+Pour pousser les modifications sur GitHub 
+git push
+
+7.2	Ajoutez le dépôt GitLab comme un nouveau dépôt distant
+ avec la commande suivante :
+`git remote add gitlab https://gitlab.com/votre_nom_d'utilisateur/votre_dépôt.git`
+
+`git remote add gitlab https://gitlab.com/Astroboypower/myPhpCode`
+Le dépôt est le nom du projet
+
+Pousser vers GitHub et GitLab en utilisant les commandes suivantes :
+
+git push origin master // pour gitHub
+git push gitlab master // pour gitLab
+
+
+
+
