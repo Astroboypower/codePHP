@@ -16,7 +16,7 @@
 
 .faFoot {
     padding: 20px;
-    font-size: 30px;
+    font-size: 60px;
     width: 30px;
     text-align: center;
     text-decoration: none;
@@ -55,7 +55,11 @@
     color: white;
 }
 .fa-github {
-    background: #582879;
+    background: black;
+    color: white;
+}
+.fa-gitlab {
+    background: #FC6D26;
     color: white;
 }
 .fa-skype {

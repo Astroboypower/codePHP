@@ -12,7 +12,11 @@ Ils sont définis en utilisant des variables CSS, ce qui permet de les réutilis
     --TitleText: #FAB131;
     --TableLines: #FAB131;
     --BackgroundTheme: #222222;
+    --BackgroundBouton: #222222;
+    --BackgroundBoutonHover: #ffffff;
     --MyGrey: #939393;
+    --Submit: #fab131;
+    --SubmitHover: #a04007;
 
 }
 [data-theme="dark"] {
@@ -29,11 +33,15 @@ Ils sont définis en utilisant des variables CSS, ce qui permet de les réutilis
     --mainButton: #FAB131;
     --secondaryButton: #0a2f48;
     --shadow: #999999;
-    --MenuText: #FAB131;
+    --MenuText: #fab131;
     --TitleText: #a04007;
     --TableLines: #0a2f48;
     --BackgroundTheme: #888888;
+    --BackgroundBouton: #ffffff;
+    --BackgroundBoutonHover: #222222;
     --MyGrey: #333333;
+    --Submit: #a04007;
+    --SubmitHover: #fab131;
 
     .menu{
         box-shadow: 5px 5px 5px 5px var(--shadow);
@@ -168,4 +176,65 @@ input[type=submit]:hover {
 .dropdown-content-menu a:hover {
     background-color: var(--borderLines);
     color:  var(--hoverTextMenuEtBoutons);
+}
+
+.custom-link  {
+    color: #007bb5; /* Couleur des liens non visités */
+}
+
+.custom-link:visited {
+    color: #2798cb; /* Couleur des liens visités */
+}
+
+
+
+.bar-container {
+    width: 100%;
+    height: 20px;
+    background: linear-gradient(to right, green, red);
+    position: relative;
+}
+
+.bar .indicator {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 2px;
+    background: #FAB131;
+}
+
+input[type=text], input[type=tel], select, textarea, input[type=email] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--borderLines);
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+}
+
+input[type=submit] {
+    background-color: var(--Submit);
+    color: var(--BackgroundBouton);
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: var(--SubmitHover);
+    color: var(--BackgroundBoutonHover);
+}
+
+.container {
+    border-radius: 5px;
+    color: var(--Submit);
+    padding: 20px;
+}
+
+.flash-message {
+    color: var(--TitleText);
+    font-weight: bold;
 }

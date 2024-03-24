@@ -5,7 +5,7 @@ require_once __DIR__ . '/../includes/entete.php';
 <div class="rowSlim"></div>
 <?php
 // Importation de la classe 'classParent' de l'espace de noms 'tests'
-use tests\classParent;
+use parentClass\classParent;
 
 // Déclaration de la classe 'classEnfant' qui étend 'classParent'
 class classEnfant extends classParent {

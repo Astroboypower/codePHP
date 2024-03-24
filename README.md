@@ -15,10 +15,19 @@ Le projet a la structure suivante :
 
 ## Comment démarrer
 
-1. Clonez ce dépôt.
+1. Clonez ce dépôt en exécutant la commande suivante dans votre terminal :
+```
+bash
+git clone
+```
 2. Naviguez vers le dossier du projet.
 3. Lancez votre serveur PHP local.
 4. Ouvrez votre navigateur et naviguez vers `localhost`.
+5. Installez les dépendances du projet en exécutant la commande suivante dans votre terminal :
+```
+bash
+composer install
+```
 
 ## Licence
 
@@ -27,34 +36,55 @@ Ce code est sous Copyright © 2024 JMC. Il est libre d'utilisation et de modific
 
 Voici l'architecture du projet
 
+|   .gitignore
+|   .gitlab-ci.yml
+|   .htaccess
+|   composer.json
+|   composer.lock
+|   dockerfile
 |   favicon.ico
+|   GUIDE.md
 |   index.php
+|   README.md
+|           
 ----add
 |       bdd.php
+|       classEnfant.php
 |       contact.php
 |       dates.php
-|       erreur.php
+|       erreur404.php
 |       failles.php
+|       games.php
 |       home.php
-|       infoServer.php
 |       superGlobales.php
 |       tableaux.php
+|       
+----config
+|       database.php
+|       mails.php
+|       routing.php
+|       
+----form
+|       contactForm.php
+|       DateForm.php
 |       
 ----includes
 |       entete.php
 |       footer.php
 |       menu.php
 |       
-|---public
-|   |---css
+----public
+|   ----css
+|   |       carousel.css
+|   |       colors.css
 |   |       font-awesome.css
 |   |       font-awesome.min.css
 |   |       footer.css
 |   |       icones.css
+|   |       main.css
 |   |       menu.css
-|   |       style.css
 |   |       
-|   |---fonts
+|   ----fonts
 |   |       fontawesome-webfont.eot
 |   |       fontawesome-webfont.svg
 |   |       fontawesome-webfont.ttf
@@ -66,14 +96,42 @@ Voici l'architecture du projet
 |   |       icomoon.ttf
 |   |       icomoon.woff
 |   |       
-|   |---images
+|   ----images
 |   |       entete.png
+|   |       identite2.png
+|   |       IMG_20180710_215727.jpg
+|   |       IMG_20180715_175443.jpg
+|   |       marker.png
 |   |       
-|   |---js
+|   ----js
 |           menu.js
+|           theme.js
 |           
-|---src
-        App.php
+----src
+|   |   App.php
+|   |   
+|   ----tests
+|           ClassParent.php
+|           
+----vendor
+    |   autoload.php
+    |   
+    ----composer
+    |       autoload_classmap.php
+    |       autoload_namespaces.php
+    |       autoload_psr4.php
+    |       autoload_real.php
+    |       autoload_static.php
+    |       ClassLoader.php
+    |       installed.json
+    |       installed.php
+    |       InstalledVersions.php
+    |       LICENSE
+    |       platform_check.php
+    |       
+    ----phpmailer
+        ----phpmailer
+            |       
         
 Le point d'entrée de l'application est le fichier `index.php`. Ce fichier fait appel à trois autres fichiers qui se trouvent dans le répertoire `includes` :
 1.	`entete.php` : Ce fichier contient l'en-tête de votre site web, y compris le menu.
@@ -176,3 +234,20 @@ Voici comment cela fonctionne en détail :
 3. Lorsqu'un utilisateur clique sur le bouton de basculement, le script JavaScript change l'attribut `data-theme` sur l'élément `<html>` et met à jour le cookie du thème.
 
 Notez que cette fonctionnalité nécessite que les cookies soient activés dans le navigateur de l'utilisateur.
+
+
+
+##Configuration de la base de données
+Avant de démarrer le projet, vous devez configurer votre base de données. Voici les étapes à suivre :
+
+Créez une nouvelle base de données MySQL. Vous pouvez le faire via l’interface de ligne de commande MySQL ou via un outil d’interface graphique comme phpMyAdmin. Notez le nom de la base de données, car vous en aurez besoin pour la configuration du projet.
+Ouvrez le fichier config/database.php dans votre éditeur de texte préféré.
+Remplacez les valeurs des constantes suivantes par vos propres informations de connexion à la base de données :
+DB_HOST : L’hôte de votre base de données. Si vous exécutez MySQL localement, cela sera probablement localhost.
+DB_USER : Le nom d’utilisateur pour accéder à votre base de données.
+DB_PASS : Le mot de passe pour accéder à votre base de données.
+DB_NAME : Le nom de la base de données que vous avez créée à l’étape 1.
+Une fois que vous avez terminé, enregistrez et fermez le fichier config/database.php.
+À ce stade, votre application devrait être capable de se connecter à votre base de données. Vous pouvez maintenant démarrer votre serveur PHP local et naviguer vers localhost dans votre navigateur pour voir votre application en action.
+N’oubliez pas que ce fichier contient des informations sensibles, donc il ne doit jamais être inclus dans le contrôle de version. Assurez-vous que config/database.php est inclus dans votre fichier .gitignore.
+

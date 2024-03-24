@@ -9,7 +9,8 @@ require_once __DIR__ . '/../includes/entete.php';
     Voici un exemple :</p>
 
 <?php
-$texte = "<script>alert('Ceci est une attaque XSS');</script>";
+$texte = "<script>alert('Ceci est une attaque XSS crée pour l\'explication, pas de risques ');</script>";
+
 $texteSecurise = htmlspecialchars($texte, ENT_QUOTES, 'UTF-8');
 
 echo  $texte . "<br>";

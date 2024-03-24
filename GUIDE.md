@@ -93,6 +93,31 @@ Cette commande supprime la branche dark-theme du dépôt local. Noter que Git ne
 Pour supprimer la branche dark-theme sur GitHub,utiliser la commande git push avec l’option --delete :
 `git push origin --delete dark-theme`
 
+## Ajout d'une librairie
+Ajouter une librairie, par exemple Mailer pour envoyer des Mails si composer est installé, il faut lancer en cmd
+`composer require phpmailer/phpmailer`
+
+Un fichier composer.json a été créé. Il liste toutes les bibliothèques du projet
+un fichier composer.lock a été créé. Il contient des informations sur les versions exactes des dépendances qui ont été installées pour le projet.
+Cela garantit que tous ceux qui travaillent sur le projet utilisent les mêmes versions des dépendances.
+
+le dossier vendor a été créé 
+Il contient toute les librairies
+
+Pour utiliser le mailer dans le code PHP
+
+		use PHPMailer\PHPMailer\PHPMailer;	
+		use PHPMailer\PHPMailer\Exception;
+
+		require 'vendor/autoload.php';
+
+		$mail = new PHPMailer(true); // Passing `true` enables exceptions
+		
+mettre le dossier vendor dans votre fichier .gitignore. Voici pourquoi :
+
+Le dossier vendor contient toutes les dépendances de votre projet, qui peuvent être téléchargées par Composer. Ces dépendances peuvent être volumineuses et peuvent changer fréquemment chaque fois que vous mettez à jour vos dépendances.
+En ne versionnant pas le dossier vendor, vous réduisez la taille de votre dépôt Git et évitez les conflits potentiels lors des mises à jour des dépendances.
+Chaque personne travaillant sur le projet peut installer les dépendances nécessaires en exécutant composer install, qui utilisera le fichier composer.lock pour installer les versions exactes des dépendances spécifiées.
 
 
 ## Dépôt GitLab:
@@ -123,6 +148,17 @@ Pousser vers GitHub et GitLab en utilisant les commandes suivantes :
 git push origin master // pour gitHub
 git push gitlab master // pour gitLab
 
+## Mise à jour des dépendances
+Si une nouvelle dépendance a été ajoutée au projet, n'oubliez pas de mettre à jour vos dépendances locales après avoir fait un `git pull`. 
+Vous pouvez le faire en exécutant la commande suivante dans votre terminal :
 
+```bash
+composer install
+```
+
+Pour mettre à jour toutes les dépendances à leurs dernières versions compatibles, utiliser la commande suivante :
+```bash
+composer update
+```
 
 

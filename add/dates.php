@@ -176,7 +176,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     <h2 class="smallTitreRow orange thick">Calcul de dates avec les formulaires </h2>
     <p class="margeGaucheDroite">
-        <a id="form"></a>
+        <a id="form">  <!-- Encrage pour revenir ici -->
         <!-- Début du formulaire -->
     <form method="post" action="<?php echo $_SERVER["PHP_SELF"];?>#form">
     <label for="departCity">Ville de départ:</label>
@@ -189,6 +189,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <option value="San Francisco" <?php if (isset($_POST['departCity']) && $_POST['departCity'] == 'San Francisco') echo 'selected="selected"'; ?>>San Francisco</option>
             <option value="Tokyo" <?php if (isset($_POST['departCity']) && $_POST['departCity'] == 'Tokyo') echo 'selected="selected"'; ?>>Tokyo</option>
         </select>
+    <br>
         <label for="arrivalCity">Ville d'arrivée:</label>
         <!-- Champ de sélection pour la ville d'arrivée -->
         <select name="arrivalCity" class="maxFormField">
@@ -205,6 +206,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <!-- Fin du formulaire -->
 
     </p>
+    <div class="container">
+        <?php
+        require_once __DIR__ . '/../form/dateForm.php';
+        ?>
+    </div>
+
 
     <br>
 

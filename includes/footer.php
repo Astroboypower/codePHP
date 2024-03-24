@@ -4,11 +4,15 @@
         <div class="blocFooter">
             <div class="blocFooter resSociaux ">
 
+
                 <a href="https://www.linkedin.com/" class="fa faFoot fa-linkedin tooltip" target="_blank"><span
                             class="tooltiptext">LinkedIn</span></a>
 
-                <a href="https://twitter.com/" class="fa faFoot fa-twitter tooltip" target="_blank"><span
-                            class="tooltiptext">Twitter</span></a>
+                <a href="https://github.com/Astroboypower/codePHP" class="fa faFoot fa-github tooltip" target="_blank"><span
+                            class="tooltiptext">GitHub</span></a>
+
+                <a href="https://gitlab.com/Astroboypower/myPhpCode" class="fa faFoot fa-gitlab tooltip"  target="_blank"><span
+                            class="tooltiptext">GiLab</span></a>
 
                 <!--
                 <a href="#" class="fa faFoot fa-youtube tooltip"target="_blank"><span class="tooltiptext">You Tube</span></a>

@@ -15,9 +15,6 @@ spl_autoload_register(function ($name) {
 });
 
 
-
-
-
 $cookie_name = "user";
 $cookie_value = "John Doe";
 setcookie($cookie_name, $cookie_value, time() + (86400 * 30), "/"); // 86400 = 1 day
@@ -25,7 +22,6 @@ setcookie($cookie_name, $cookie_value, time() + (86400 * 30), "/"); // 86400 = 1
 $home = '/';
 $filesDirecrory = 'add/';
 $adresse = $home.'index.php?what=';
-$imagesDirectory = 'C:/wamp64/www/codePhp/public/images/';
 
 $ccsStyle = '/public/css/colors.css';
 $ccsMain = '/public/css/main.css';
@@ -65,7 +61,7 @@ include __DIR__.'/../includes/menu.php';
 ?>
 <!-- fin menu -->
 
-<label class="switch" style="position: absolute; top: 20px; right: 20px;"><!-- Bouton pour changer de thème -->
+<label class="switch" style="position: fixed; top: 12px; right: 80px; z-index: 9999;"><!-- Bouton pour changer de thème -->
     <input type="checkbox" <?php echo $checked; ?>>
     <span class="slider round"></span>
 </label>
