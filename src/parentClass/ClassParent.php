@@ -1,7 +1,7 @@
 <?php
 
 // Déclaration de l'espace de noms 'tests'
-namespace tests;
+namespace parentClass;
 
 // Déclaration de la classe 'classParent'
 class classParent {

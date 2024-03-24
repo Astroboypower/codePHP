@@ -26,10 +26,10 @@ else {
 ?>
 
 <h1 class="smallTitreRow orange thick"> ici c'est la page d'accueil</h1>
-<h3 class="smallTitreRow orange thick"> pour lancer l'autoladeur et toutes les classes presentes dans le src</h3>
+<h3 class="smallTitreRow orange thick"> Voici un petit code PHP</h3>
 
-<p>en php il faut lancer:<br>
-    <em>spl_autoload_register</em>
+<p>Ce code permet de démarrer un projet rapidement, avec la gestion des URL, l'envoi des mails et toutes les fonctionnalités qui'il faut pour démmarrer une petit projet PHP<br>
+
 </p>
 
 <?php
@@ -41,9 +41,10 @@ spl_autoload_register(function ($name) {
 // Création d'une nouvelle instance de la classe App avec '/index' comme argument
 $app = new App('/index');
 
-// Appel de la méthode render de l'objet $app et affichage du résultat avec var_dump
-var_dump($app->render());
+?>
+<div class="rowSlim"></div>
 
+<?php
 // Inclusion du fichier footer.php qui contient probablement le pied de page de votre site
 require_once __DIR__ . '/includes/footer.php';
 ?>

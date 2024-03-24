@@ -77,6 +77,7 @@ foreach ($variables as $key => $value) {
 echo $nom; // Affiche 'John'
 
 ?>
+<div class="rowSlim"></div>
 
 <?php
 require_once __DIR__.'/../includes/footer.php';
